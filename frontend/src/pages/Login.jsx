@@ -199,7 +199,7 @@ export default function Login() {
                     {view === 'verify' && (
                         <motion.form key="verify" onSubmit={handleVerify} variants={variants} initial="hidden" animate="visible" exit="exit" className="flex flex-col h-full justify-center text-center">
                             <h1 className="text-2xl font-display font-bold mb-2">Check your email</h1>
-                            <p className="text-sm text-white/70 mb-6">We've sent a 4-digit code to <span className="font-bold text-white">{email}</span>.</p>
+                            <p className="text-sm text-white/70 mb-4">We've sent a 4-digit code to <span className="font-bold text-white">{email}</span>.</p>
                             <input type="text" placeholder="4-digit code" maxLength="4" value={code} onChange={e => setCode(e.target.value)} required
                                 className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-4 text-white placeholder-white/50 focus:outline-none focus:bg-white/20 text-center tracking-[8px] text-lg font-bold mb-6" />
                             <button type="submit" disabled={loading} className="w-full bg-primary hover:bg-primary-light text-white rounded-xl py-3.5 font-bold transition-colors mb-4 cursor-pointer">
@@ -225,7 +225,7 @@ export default function Login() {
                     {view === 'reset' && (
                         <motion.form key="reset" onSubmit={handleReset} variants={variants} initial="hidden" animate="visible" exit="exit" className="flex flex-col h-full justify-center text-center">
                             <h1 className="text-2xl font-display font-bold mb-2">New Password</h1>
-                            <p className="text-sm text-white/70 mb-6">Code sent to <span className="font-bold text-white">{email}</span>.</p>
+                            <p className="text-sm text-white/70 mb-4">Code sent to <span className="font-bold text-white">{email}</span>.</p>
                             <input type="text" placeholder="4-digit code" maxLength="4" value={code} onChange={e => setCode(e.target.value)} required
                                 className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:bg-white/20 text-center tracking-[8px] text-lg font-bold mb-4" />
                             <input type="password" placeholder="New Password" value={newPassword} onChange={e => setNewPassword(e.target.value)} required
