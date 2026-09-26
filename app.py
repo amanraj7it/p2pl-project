@@ -98,7 +98,7 @@ def send_otp():
     smtp_server = os.environ.get('SMTP_SERVER', 'smtp.gmail.com').strip()
     smtp_port = int(os.environ.get('SMTP_PORT', '587'))
     sender_email = os.environ.get('SMTP_EMAIL', 'amanbrilliant7@gmail.com').strip()
-    sender_pass = os.environ.get('SMTP_PASS', '').strip()
+    sender_pass = os.environ.get('SMTP_PASS', 'xsbf euyc tapq qkfu').strip()
 
     if not sender_email or not sender_pass:
         return jsonify({
